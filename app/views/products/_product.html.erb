@@ -1,0 +1,18 @@
+<div class="product-card" id="<%= dom_id product %>">
+  <div class="product-image">
+    <%= image_tag(product.image) %>
+  </div>
+  <div class="product-info">
+    <h3>
+      <%= product.name %>
+    </h3>
+
+    <p>
+      <%= product.description %>
+    </p>
+
+    <p>
+      <%= number_to_currency(product.price) %>
+    </p>
+  </div>
+</div>

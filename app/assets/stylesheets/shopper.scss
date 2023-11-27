@@ -1,0 +1,91 @@
+.shopper-index {
+    background-color: #fdf6e4; // A warm, light beige background
+    padding: 50px 15px; // Adjusted padding for a spacious layout
+    min-height: 100vh;
+    font-family: 'Helvetica Neue', sans-serif; // A clean, sans-serif font
+
+    h1 {
+        text-align: center;
+        color: #2c3e50; // A deep navy blue
+        font-size: 2.4rem;
+        margin-bottom: 30px; // Adjusted space below the header
+    }
+
+    #products {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); // Two columns
+        grid-gap: 20px; // Space between the grid items
+        max-width: 1200px; // Max width of the grid container
+        margin: 0 auto; // Centering the grid container
+
+        .product-item {
+            background-color: #f7f7f7; // Very light grey for the cards
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15); // A more pronounced shadow for depth
+            border-radius: 12px; // More pronounced rounded corners
+            overflow: hidden; // Ensures the content fits within the rounded corners
+            transition: transform 0.3s ease, box-shadow 0.3s ease; // Smooth transition for hover effect
+
+            &:hover {
+                transform: translateY(-5px); // Slight lift effect on hover
+                box-shadow: 0 8px 16px rgba(0, 0, 0, 0.18); // Enhanced shadow on hover
+            }
+
+            .product-image {
+                display: flex;
+                /* Use flexbox to center the child img */
+                justify-content: center;
+                /* Center horizontally */
+                align-items: center;
+                /* Center vertically if the .product-image has a specific height */
+            }
+
+            .product-image img {
+                max-width: 100%;
+                /* Full width of the column */
+                max-height: 200px;
+                /* Limiting image height */
+                object-fit: cover;
+                /* Ensures the image covers the area, cropping if necessary */
+                display: block;
+                /* Display as block-level element */
+            }
+
+
+            .product-info {
+                padding: 15px;
+
+                p,
+                .price {
+                    margin-bottom: 10px;
+                }
+
+                h3,
+                .price {
+                    margin-bottom: 10px;
+                    text-align: center;
+                }
+
+                .price {
+                    color: #e74c3c; // A bold, attention-grabbing color for the price
+                    font-weight: bold;
+                    font-size: 1.2rem;
+                }
+            }
+        }
+    }
+
+    .action-link {
+        display: inline-block;
+        background-color: #3498db; // A bright blue for contrast
+        color: #fff;
+        padding: 10px 20px;
+        margin-top: 15px;
+        border-radius: 5px;
+        text-decoration: none;
+        transition: background-color 0.2s ease;
+
+        &:hover {
+            background-color: #2980b9; // Darken the button on hover for an interactive cue
+        }
+    }
+}

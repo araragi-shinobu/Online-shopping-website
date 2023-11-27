@@ -1,0 +1,18 @@
+<div class="index-page">
+  <p class="notice"><%= notice %></p>
+
+  <h1>Products</h1>
+
+  <div id="products">
+    <% @products.each do |product| %>
+      <div class="product-item">
+        <%= render product %>
+        <p>
+          <%= link_to "Show this product", product %>
+        </p>
+      </div>
+    <% end %>
+  </div>
+
+  <%= link_to "New product", new_product_path, class: "new-product-link" %>
+</div>

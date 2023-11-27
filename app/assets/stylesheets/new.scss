@@ -1,0 +1,42 @@
+.new-product {
+    h1 {
+        text-align: center;
+        color: #333;
+        margin-bottom: 20px;
+    }
+
+    .form-container {
+        max-width: 600px;
+        margin: 0 auto; // Center the form on the page
+        padding: 20px;
+        background-color: #f9f9f9;
+        border: 1px solid #eaeaea;
+        border-radius: 4px;
+
+        form {
+            display: flex;
+            flex-direction: column;
+
+            .field,
+            .actions {
+                margin-bottom: 15px;
+            }
+        }
+    }
+
+    .navigation-link {
+        text-align: center;
+        margin-top: 20px;
+
+        a {
+            color: #0275d8;
+            text-decoration: none;
+            padding: 10px 15px;
+            border-radius: 4px;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Store</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+
+  <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+  <%= javascript_importmap_tags %>
+</head>
+
+<body>
+  <div id="banner">
+    <%= image_tag("logo.png", alt: "Store Logo") %>
+    <h1><%= @page_title || "Our Products" %></h1>
+  </div>
+  <div id="bottomdiv">
+    <div id="leftside">
+      <!-- Left side content goes here -->
+      <div id="cart">
+        <%= render(@cart) %>
+      </div>
+    </div>
+    <div id="main">
+      <%= yield %>
+    </div>
+  </div>
+</body>
+</html>

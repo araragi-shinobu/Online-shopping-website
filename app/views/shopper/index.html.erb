@@ -1,0 +1,26 @@
+<div class="shopper-index">
+  <h1>Product Catalog</h1>
+  <div id="products">
+    <% @allproducts.each do |product| %>
+      <div class="product-item">
+        <div class="product-image">
+          <%= image_tag(product.image) %>
+        </div>
+        <div class="product-info">
+          <h3>
+            <%= product.name %>
+          </h3>
+          <p>
+            <%= product.description %>
+          </p>
+          <div class="price">
+            <%= number_to_currency(product.price) %>
+          </div>
+        </div>
+
+        <%= button_to 'Add to Cart', 
+        lineitems_path(product_id: product.id), class: 'add_to_cart', remote: true %>
+      </div>
+    <% end %>
+  </div>
+</div>

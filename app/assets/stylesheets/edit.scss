@@ -1,0 +1,46 @@
+.edit-product {
+    h1 {
+        text-align: center;
+        color: #333;
+        margin-bottom: 20px;
+    }
+
+    .form-container {
+        max-width: 600px;
+        margin: 0 auto; // Center the form on the page
+        padding: 20px;
+        background-color: #f9f9f9;
+        border: 1px solid #eaeaea;
+        border-radius: 4px;
+
+        form {
+            display: flex;
+            flex-direction: column;
+
+            .field,
+            .actions {
+                margin-bottom: 15px;
+            }
+
+            .actions {
+                display: flex;
+                justify-content: space-between;
+            }
+        }
+    }
+
+    .navigation-links {
+        text-align: center;
+        margin-top: 20px;
+
+        a {
+            color: #0275d8; // Bootstrap's default link color for reference
+            text-decoration: none;
+            margin: 0 10px;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}

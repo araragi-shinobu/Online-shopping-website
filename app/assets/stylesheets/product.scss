@@ -1,0 +1,37 @@
+.product-card {
+    display: flex; // Use flexbox for layout
+    align-items: flex-start; // Align items to the top
+    max-width: 600px; // Set a max width for the card
+    margin: 20px; // Add some space around each card
+    padding: 15px; // Inner spacing
+    background-color: #f9f9f9; // Light grey background
+    border: 1px solid #eaeaea; // Subtle border
+    border-radius: 4px; // Rounded corners
+
+    // The image container
+    .product-image {
+        flex: 0 0 150px; // Do not grow, do not shrink, start with 150px width
+        margin-right: 20px; // Space between image and text
+
+        img {
+            width: 100%; // Make the image responsive to the container's width
+            height: auto; // Maintain aspect ratio
+            border-radius: 4px; // Optional: rounded corners for the image
+        }
+    }
+
+    // The text container
+    .product-info {
+        flex: 1; // Take up the remaining space
+
+        p {
+            margin: 5px 0; // Space out paragraphs
+            color: #333; // Dark grey color for text
+
+            &:last-child {
+                color: #27ae60; // A different color for the price
+                font-weight: bold; // Make the price bold
+            }
+        }
+    }
+}

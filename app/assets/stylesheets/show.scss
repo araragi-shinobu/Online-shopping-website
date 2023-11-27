@@ -1,0 +1,48 @@
+.show-product {
+    .notice {
+        color: green;
+        text-align: center;
+        margin: 20px 0;
+    }
+
+    .product-details {
+        max-width: 600px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #f9f9f9;
+        border: 1px solid #eaeaea;
+        border-radius: 4px;
+    }
+
+    .product-actions {
+        text-align: center;
+        margin-top: 20px;
+
+        a,
+        button {
+            color: #0275d8; // Example link color
+            margin: 0 10px;
+            text-decoration: none;
+            border: none;
+            background-color: transparent;
+            padding: 10px 15px;
+            border-radius: 4px;
+
+            &:hover {
+                text-decoration: underline;
+                background-color: #f5f5f5;
+            }
+        }
+
+        button {
+            color: #fff;
+            background-color: #d9534f; // Example button color for 'destroy' action
+            border-color: #d43f3a;
+
+            &:hover {
+                background-color: #c9302c;
+                border-color: #ac2925;
+            }
+        }
+    }
+}
