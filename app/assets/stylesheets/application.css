@@ -83,7 +83,7 @@ h6 {
 
 /* Sidebar styling */
 #leftside {
-    width: 300px;
+    width: 500px;
     background-color: #404040;
     color: #ffffff;
     padding: 20px;
@@ -113,6 +113,16 @@ h6 {
 
 /* Bottom div styling */
 #bottomdiv {
+    .notice {
+        color: green;
+        /* other styles */
+    }
+
+    .alert {
+        color: red;
+        /* other styles */
+    }
+
     display: flex;
     width: 100%;
     /* Ensure full width */

@@ -1,0 +1,24 @@
+<div class="product-card">
+  <div class="product-image">
+    <%= image_tag(@product.image) %>
+  </div>
+  <div class="product-info">
+    <h3>
+      <%= @product.name %>
+    </h3>
+
+    <p>
+      <%= @product.description %>
+    </p>
+
+    <p>
+      <%= number_to_currency(@product.price) %>
+    </p>
+  </div>
+  <div>
+    <%= button_to 'Add to Cart', 
+            lineitems_path(product_id: @product.id), class: 'button', remote: true %>
+    <%= button_to 'Back', shopper_path, method: :get, class: 'button' %>
+  </div>
+</div>
+

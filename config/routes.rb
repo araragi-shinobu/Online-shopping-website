@@ -1,9 +1,14 @@
 Rails.application.routes.draw do
+  resources :users
   resources :orders
   resources :lineitems
   resources :carts
   get 'shopper/index'
   root "shopper#index", as: "shopper"
+  get 'shopper/show/:id', to: 'shopper#show', as: 'shopper_show'
+  get 'logon', to: 'authenticate#logon'
+  post 'checkpassword', to: 'authenticate#checkpassword'
+  delete 'logout', to: 'authenticate#logout'
   resources :products
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 

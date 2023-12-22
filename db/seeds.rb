@@ -15,3 +15,7 @@ Product.create!(name: 'iPhone13', description: %{iPhone 13, delivering breakthro
 Product.create!(name: 'ESP LTD EC-FR', description: %{The ESP LTD EC-BKS BLKS Black Metal, the name says it all: a metal axe reduced to the essentials in a cool "All Black" look. The body of the Black Metal is made of mahogany, the mahogany neck is kitted out with a noble Macassar Ebony fingerboard. When it comes to hardware, ESP LTD relies on the tried and tested: Tone Pros Bridge and Tailpiece as well as locking Tuners. A Seymour Duncan Blackened Black Winter humbucker is responsible for the ultimate sound.}, image: 'guitar.png', price: 1180.00)
 
 Product.create!(name: 'Dingwall NG3', description: %{Body: Alder, Neck: Maple, Fretboard: Maple, Neck attachment: Bolt-on, Neck profile: Medium thin C, 24 Medium jumbo frets, Nut width: 46 mm (1.79"), Scale: (min.) 864 mm (34.02") - (max.) 940 mm (37.01"), Fretboard radius: 240 mm (9.45"), Pickguard: Carbon fibre print, Pickup: FD-3N (bridge) - FD- 3N (middle) - FD-3N (neck), Electronics: Dark glass 3-band, Controls: volume, bass, mids, treble, Rotary PU selector, Switch: Active / Passive, Colour: Metallic Black.}, image: 'bass.png', price: 2499.00)
+
+User.delete_all
+user = User.create!(userid: 'muer', password:'12345')
+user.save!

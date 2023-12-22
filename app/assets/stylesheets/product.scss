@@ -34,4 +34,22 @@
             }
         }
     }
+
+    // button styles
+    .button {
+        display: inline-block;
+        margin-top: 10px;
+        background-color: #498a64; // Green color for cart actions
+        color: #fff;
+        padding: 10px 15px;
+        border-radius: 4px;
+        text-decoration: none;
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.2s ease-in-out;
+
+        &:hover {
+            background-color: darken(#498a64, 10%);
+        }
+    }
 }

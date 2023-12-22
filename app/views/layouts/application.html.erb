@@ -16,12 +16,19 @@
     <h1><%= @page_title || "Our Products" %></h1>
   </div>
   <div id="bottomdiv">
+    <% if controller_name == 'authenticate'%>
+      <% flash.each do |name, msg| %>
+        <%= content_tag :div, msg, class: name %>
+      <% end %>
+    <% end %>
+    <% if controller_name != 'products' && controller_name != 'authenticate'%>
     <div id="leftside">
       <!-- Left side content goes here -->
       <div id="cart">
-        <%= render(@cart) %>
+        <%= render(@cart) if @cart.present? %>
       </div>
     </div>
+    <% end %>
     <div id="main">
       <%= yield %>
     </div>

@@ -1,5 +1,14 @@
 <div class="shopper-index">
   <h1>Product Catalog</h1>
+
+  <!-- Search Form -->
+  <div class="search-container">
+    <%= form_with(url: shopper_url, method: :get, local: true) do %>
+      <%= text_field_tag :search, params[:search], placeholder: "Search Products", class: "search-field" %>
+      <%= submit_tag "Search", class: "search-button" %>
+    <% end %>
+  </div>
+
   <div id="products">
     <% @allproducts.each do |product| %>
       <div class="product-item">
@@ -18,8 +27,16 @@
           </div>
         </div>
 
-        <%= button_to 'Add to Cart', 
-        lineitems_path(product_id: product.id), class: 'add_to_cart', remote: true %>
+        <div class="product-actions">
+          <%= button_to 'Add to Cart', 
+              lineitems_path(product_id: product.id), 
+              class: 'add_to_cart', 
+              remote: true %>
+
+          <%= link_to 'View details', 
+              shopper_show_path(product), 
+              class: 'view-details' %>
+        </div>
       </div>
     <% end %>
   </div>
